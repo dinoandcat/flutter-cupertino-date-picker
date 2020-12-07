@@ -100,7 +100,8 @@ class DatePicker {
         onCancel: onCancel,
         onChange: onChange,
         onConfirm: onConfirm,
-        theme: Theme.of(context, shadowThemeOnly: true),
+        //FixMe flutter beta 1.24.0-10.2 sdk beta 为了null safety 中去除了shadowThemeOnly参数  https://github.com/flutter/flutter/pull/69050
+        theme: Theme.of(context),
         barrierLabel:
             MaterialLocalizations.of(context).modalBarrierDismissLabel,
         minuteDivider: minuteDivider,
